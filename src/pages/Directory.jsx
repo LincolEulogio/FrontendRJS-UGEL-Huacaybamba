@@ -120,142 +120,172 @@ const Directory = () => {
     return matchesFilter && matchesSearch;
   });
 
-  const MemberModal = ({ member, onClose }) => (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 animate-in fade-in duration-300">
-      <div
-        className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
-        onClick={onClose}
-      ></div>
-      <div className="relative bg-white dark:bg-slate-900 w-full max-w-5xl rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-        <button
-          onClick={onClose}
-          className="absolute top-6 right-6 z-20 size-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors text-slate-500 dark:text-slate-400"
-        >
-          <span className="material-symbols-rounded">close</span>
-        </button>
+  const MemberModal = ({ member, onClose }) => {
+    const contactRef = React.useRef(null);
+    const contentRef = React.useRef(null);
+    const [showScrollArrow, setShowScrollArrow] = useState(true);
 
-        <div className="md:w-5/12 bg-slate-50 dark:bg-slate-800/50 p-12 flex items-center justify-center relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full opacity-5">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage:
-                  "radial-gradient(#1152d4 0.5px, transparent 0.5px)",
-                backgroundSize: "24px 24px",
-              }}
-            ></div>
+    const scrollToContact = () => {
+      contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    const handleScroll = () => {
+      if (contentRef.current) {
+        const { scrollTop, scrollHeight, clientHeight } = contentRef.current;
+        const isNearBottom = scrollHeight - scrollTop - clientHeight < 50;
+        setShowScrollArrow(!isNearBottom);
+      }
+    };
+
+    return (
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 animate-in fade-in duration-300">
+        <div
+          className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
+          onClick={onClose}
+        ></div>
+        <div className="relative bg-white dark:bg-slate-900 w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] md:max-h-[80vh]">
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 z-20 size-8 md:size-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors text-slate-500 dark:text-slate-400"
+          >
+            <span className="material-symbols-rounded text-lg md:text-xl">
+              close
+            </span>
+          </button>
+
+          <div className="md:w-5/12 bg-slate-50 dark:bg-slate-800/50 p-6 md:p-10 flex items-center justify-center relative overflow-hidden shrink-0">
+            <div className="absolute top-0 left-0 w-full h-full opacity-5">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(#1152d4 0.5px, transparent 0.5px)",
+                  backgroundSize: "24px 24px",
+                }}
+              ></div>
+            </div>
+            <div className="relative z-10 w-48 md:w-full aspect-[4/5]">
+              <div className="absolute inset-0 border-2 border-primary/20 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] rotate-6 scale-105"></div>
+              <div className="w-full h-full rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] bg-slate-200 dark:bg-slate-700 overflow-hidden shadow-2xl">
+                <img
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  src={member.photo}
+                />
+              </div>
+            </div>
           </div>
-          <div className="relative z-10 w-full aspect-[4/5]">
-            <div className="absolute inset-0 border-2 border-primary/20 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] rotate-6 scale-105"></div>
-            <div className="w-full h-full rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] bg-slate-200 dark:bg-slate-700 overflow-hidden shadow-2xl">
-              <img
-                alt={member.name}
-                className="w-full h-full object-cover"
-                src={member.photo}
-              />
+
+          <div
+            ref={contentRef}
+            onScroll={handleScroll}
+            className="md:w-7/12 p-6 md:p-10 overflow-y-auto relative"
+          >
+            <div className="mb-6 md:mb-8">
+              <span className="inline-block py-1 px-3 bg-primary/10 text-primary text-[10px] md:text-xs font-bold rounded-full mb-3 uppercase tracking-widest">
+                Ficha de Funcionario
+              </span>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 leading-tight">
+                {member.name}
+              </h2>
+              <p className="text-base md:text-lg font-bold text-primary flex items-center gap-2">
+                <span className="material-symbols-rounded text-lg md:text-xl">
+                  workspace_premium
+                </span>
+                {member.role}
+              </p>
+            </div>
+
+            <div className="space-y-6 md:space-y-8">
+              <section>
+                <h3 className="text-xs md:text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
+                  <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span>
+                  Principales Funciones
+                </h3>
+                <ul className="space-y-3">
+                  {member.functions.map((func, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start gap-3 text-sm md:text-base text-slate-600 dark:text-slate-400"
+                    >
+                      <span className="material-symbols-rounded text-primary text-sm mt-1 shrink-0">
+                        check_circle
+                      </span>
+                      <span>{func}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-xs md:text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
+                  <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span>
+                  Información de Contacto
+                </h3>
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="flex items-center justify-between p-3 md:p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+                    <div className="flex items-center gap-3 md:gap-4 overflow-hidden">
+                      <div className="size-8 md:size-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-sm shrink-0">
+                        <span className="material-symbols-rounded text-sm md:text-base">
+                          mail
+                        </span>
+                      </div>
+                      <div className="overflow-hidden">
+                        <p className="text-[10px] font-bold text-slate-400 uppercase">
+                          Correo Institucional
+                        </p>
+                        <p className="text-xs md:text-sm font-semibold dark:text-slate-200 truncate">
+                          {member.email}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a
+                      href={`tel:${member.phone}`}
+                      className="flex-1 flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-colors group"
+                    >
+                      <div className="size-8 md:size-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-all shrink-0">
+                        <span className="material-symbols-rounded text-sm md:text-base">
+                          call
+                        </span>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase">
+                          Llamar
+                        </p>
+                        <p className="text-xs md:text-sm font-semibold dark:text-slate-200">
+                          {member.phone}
+                        </p>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      className="flex-1 flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-900/30 hover:bg-green-100 dark:hover:bg-green-900/20 transition-colors group"
+                    >
+                      <div className="size-8 md:size-10 rounded-xl bg-green-500 flex items-center justify-center text-white shadow-lg shadow-green-200 dark:shadow-none shrink-0">
+                        <span className="material-symbols-rounded text-sm md:text-base">
+                          forum
+                        </span>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-green-600 dark:text-green-400 uppercase">
+                          WhatsApp
+                        </p>
+                        <p className="text-xs md:text-sm font-semibold text-green-700 dark:text-green-300">
+                          Mensaje
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
-
-        <div className="md:w-7/12 p-8 md:p-14 overflow-y-auto max-h-[90vh]">
-          <div className="mb-8">
-            <span className="inline-block py-1 px-3 bg-primary/10 text-primary text-xs font-bold rounded-full mb-3 uppercase tracking-widest">
-              Ficha de Funcionario
-            </span>
-            <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2 leading-tight">
-              {member.name}
-            </h2>
-            <p className="text-lg font-bold text-primary flex items-center gap-2">
-              <span className="material-symbols-rounded text-xl">
-                workspace_premium
-              </span>
-              {member.role}
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            <section>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span>
-                Principales Funciones
-              </h3>
-              <ul className="space-y-3">
-                {member.functions.map((func, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-start gap-3 text-slate-600 dark:text-slate-400"
-                  >
-                    <span className="material-symbols-rounded text-primary text-sm mt-1">
-                      check_circle
-                    </span>
-                    <span>{func}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            <section>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                <span className="h-px w-6 bg-slate-200 dark:bg-slate-700"></span>
-                Información de Contacto
-              </h3>
-              <div className="grid grid-cols-1 gap-4">
-                <div className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
-                  <div className="flex items-center gap-4">
-                    <div className="size-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-sm">
-                      <span className="material-symbols-rounded">mail</span>
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-bold text-slate-400 uppercase">
-                        Correo Institucional
-                      </p>
-                      <p className="text-sm font-semibold dark:text-slate-200">
-                        {member.email}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href={`tel:${member.phone}`}
-                    className="flex-1 flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-colors group"
-                  >
-                    <div className="size-10 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
-                      <span className="material-symbols-rounded">call</span>
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-bold text-slate-400 uppercase">
-                        Llamar
-                      </p>
-                      <p className="text-sm font-semibold dark:text-slate-200">
-                        {member.phone}
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="flex-1 flex items-center gap-4 p-4 rounded-2xl bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-900/30 hover:bg-green-100 dark:hover:bg-green-900/20 transition-colors group"
-                  >
-                    <div className="size-10 rounded-xl bg-green-500 flex items-center justify-center text-white shadow-lg shadow-green-200 dark:shadow-none">
-                      <span className="material-symbols-rounded">forum</span>
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-bold text-green-600 dark:text-green-400 uppercase">
-                        WhatsApp
-                      </p>
-                      <p className="text-sm font-semibold text-green-700 dark:text-green-300">
-                        Mensaje Directo
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="bg-background-light dark:bg-background-dark px-6">
