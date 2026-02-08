@@ -4,10 +4,9 @@ const WelcomeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const hasSeenModal = localStorage.getItem("hasSeenWelcomeModal");
-    if (!hasSeenModal) {
-      setTimeout(() => setIsOpen(true), 500);
-    }
+    // Show modal on every visit with a slight delay
+    const timer = setTimeout(() => setIsOpen(true), 500);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -23,7 +22,6 @@ const WelcomeModal = () => {
 
   const handleClose = () => {
     setIsOpen(false);
-    localStorage.setItem("hasSeenWelcomeModal", "true");
   };
 
   if (!isOpen) return null;

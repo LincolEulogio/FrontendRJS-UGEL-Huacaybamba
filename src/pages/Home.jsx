@@ -250,7 +250,7 @@ const Home = () => {
       </section>
 
       {/* Gestión Institucional */}
-      <section className="bg-primary/5 dark:bg-slate-900/50 py-24 px-6">
+      <section className="bg-primary/5 dark:bg-slate-900/50 py-24 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4 dark:text-white">
