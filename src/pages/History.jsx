@@ -4,7 +4,7 @@ const History = () => {
   return (
     <div>
       {/* Header Section */}
-      <header className="relative overflow-hidden py-24 lg:py-32">
+      <header className="relative overflow-hidden py-24 lg:py-32 px-6">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -42,7 +42,7 @@ const History = () => {
 
       {/* Geography Section */}
       <section className="py-24 bg-slate-100 dark:bg-slate-900/50">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
               <div className="grid grid-cols-2 gap-6">
@@ -93,7 +93,7 @@ const History = () => {
       </section>
 
       {/* Legal Framework */}
-      <section className="py-24">
+      <section className="py-24 px-6">
         <div className="container mx-auto">
           <div className="mb-16">
             <h2 className="text-4xl font-bold mb-4">
@@ -166,7 +166,7 @@ const History = () => {
 
       {/* Recognition Process */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-6">
           <h2 className="text-center text-4xl font-bold mb-20">
             Proceso de Reconocimiento - Hito Institucional
           </h2>
@@ -225,7 +225,7 @@ const History = () => {
       </section>
 
       {/* 2013 Operations */}
-      <section className="relative bg-primary py-32 overflow-hidden">
+      <section className="relative bg-primary py-32 overflow-hidden px-6">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         </div>
@@ -275,7 +275,7 @@ const History = () => {
       </section>
 
       {/* Social Impact */}
-      <section className="py-24">
+      <section className="py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">

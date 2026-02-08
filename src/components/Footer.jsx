@@ -13,7 +13,7 @@ const Footer = () => {
                 <img
                   alt="UGEL Logo"
                   className="w-full h-full object-contain"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGhJNC8R-z5xmbw5XKdRpZUcHbLbL7EdYPbyyzjtIS5-jsgx9UNv_W8zbvI5sXKg3dAdrwn03pQv-_4LZj48fn_-tBMWV-TdNjyT57zDNdNvmqgN-ITGRUiXSsEHwcgcDkdcY73tEnIAoOBahNbImtfjLR43yIrwAx94DQmcfxkCNuOBS411ZOt1KOeP6IXhb-l0FLL_eN-Y4yV3AMBvhcfwgsuHOLJjq6hKa0qDpTQQJpNsT7to31BZ1xZpL4JxLHWlzFyBFFxbA"
+                  src="/logo-ugel-huacaybamba.png"
                 />
               </div>
               <div>

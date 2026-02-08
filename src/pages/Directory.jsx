@@ -258,9 +258,9 @@ const Directory = () => {
   );
 
   return (
-    <div className="bg-background-light dark:bg-background-dark">
+    <div className="bg-background-light dark:bg-background-dark px-6">
       {/* Hero Section */}
-      <header className="pt-20 pb-12 px-6 text-center max-w-4xl mx-auto">
+      <header className="pt-20 pb-12 text-center max-w-4xl mx-auto ">
         <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-bold tracking-widest uppercase mb-4">
           Directorio 2024
         </span>

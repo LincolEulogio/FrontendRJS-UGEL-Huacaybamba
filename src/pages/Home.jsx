@@ -23,7 +23,7 @@ const Home = () => {
       <HeroSlider />
 
       {/* Aplicativos de Interés */}
-      <section className="container mx-auto py-20 relative z-10 -mt-20">
+      <section className="container mx-auto py-20 relative z-10">
         <div className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl rounded-[32px] p-10 shadow-2xl border border-white/20 dark:border-slate-700/50">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-extrabold mb-2 dark:text-white">
@@ -103,7 +103,7 @@ const Home = () => {
       </section>
 
       {/* Acceso a Servicios y Transparencia */}
-      <section className="relative h-[650px] overflow-hidden">
+      <section className="relative lg:h-[780px] h-auto overflow-hidden py-20 px-6 lg:py-0">
         <img
           alt="Vista Panorámica de Huacaybamba"
           className="absolute inset-0 w-full h-full object-cover"
@@ -111,7 +111,7 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-slate-900/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-        <div className="relative z-10 container mx-auto h-full flex items-center">
+        <div className="relative z-10 container mx-auto lg:h-full flex items-center">
           <div className="w-full lg:w-2/3">
             <h2 className="text-5xl font-extrabold text-white mb-8 tracking-tight">
               Acceso a Servicios y Transparencia
@@ -209,7 +209,7 @@ const Home = () => {
       </section>
 
       {/* Trámites y Servicios */}
-      <section className="container mx-auto py-24">
+      <section className="container mx-auto py-24 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold mb-4 dark:text-white">
             Trámites y Servicios
@@ -250,7 +250,7 @@ const Home = () => {
       </section>
 
       {/* Gestión Institucional */}
-      <section className="bg-primary/5 dark:bg-slate-900/50 py-24">
+      <section className="bg-primary/5 dark:bg-slate-900/50 py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4 dark:text-white">
@@ -281,12 +281,12 @@ const Home = () => {
                   talento de nuestros niños y jóvenes florezca sin límites."
                 </p>
               </div>
-              <div className="mt-12 flex items-center gap-6">
+              <div className="mt-12 gap-6">
                 <div>
                   <p className="font-extrabold text-2xl dark:text-white">
                     Dr. Juan Carlos Pérez
                   </p>
-                  <p className="text-primary font-bold tracking-wide">
+                  <p className="text-primary font-bold tracking-wide mt-2 mb-4">
                     DIRECTOR - UGEL HUACAYBAMBA
                   </p>
                 </div>
@@ -332,8 +332,8 @@ const Home = () => {
       </section>
 
       {/* Directorio de Funcionarios */}
-      <section className="container mx-auto py-24">
-        <div className="flex justify-between items-end mb-16">
+      <section className="container mx-auto py-24 px-6">
+        <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-end mb-16">
           <div>
             <p className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
               Nuestro Equipo
@@ -343,7 +343,7 @@ const Home = () => {
             </h2>
           </div>
           <a
-            className="bg-slate-100 dark:bg-slate-800 px-6 py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-all"
+            className="bg-slate-200 dark:bg-slate-800 px-6 py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-all"
             href="#"
           >
             Ver todo el directorio
@@ -430,7 +430,7 @@ const Home = () => {
       </section>
 
       {/* Estadísticas */}
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary py-20 px-6">
         <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
           {[
             {
@@ -460,7 +460,7 @@ const Home = () => {
       </section>
 
       {/* Últimas Noticias */}
-      <section className="container mx-auto py-24">
+      <section className="container mx-auto py-24 px-6">
         <div className="flex justify-between items-center mb-16">
           <h2 className="text-4xl font-extrabold dark:text-white">
             Últimas Noticias
@@ -563,9 +563,9 @@ const Home = () => {
       </section>
 
       {/* Convocatorias Vigentes */}
-      <section className="bg-slate-50 dark:bg-slate-900/30 py-24">
+      <section className="bg-slate-100 dark:bg-slate-900/30 py-24 px-6">
         <div className="container mx-auto">
-          <div className="flex justify-between items-end mb-12">
+          <div className="mb-12 md:flex md:justify-center md:items-center md:gap-6">
             <div>
               <h2 className="text-4xl font-extrabold mb-4 dark:text-white">
                 Convocatorias Vigentes
@@ -576,7 +576,7 @@ const Home = () => {
               </p>
             </div>
             <a
-              className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
+              className="text-primary font-bold flex items-center gap-2 md:ml-auto hover:gap-4 transition-all mt-2 md:mt-0"
               href="#"
             >
               Ver todas las convocatorias{" "}

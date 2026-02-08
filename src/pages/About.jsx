@@ -12,16 +12,16 @@ const About = () => {
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYYh9z8zcfFyqbUe4LV7bcRb1sRC2EvT3RIvKO8jspfUUjmkyzQBqDJDjPxrCZuC7ybD-7ZN9EtkpLQDXKtMNEKZQT65PnM78Ra3zpyT3AD-7P6y2I7SptQuikhN2oQtbYCCxhwsXZ17nFYUljg6kJht3sL1P4A-ToTm0SpGwY4bHLdQIdbQezEInQiBa1AEvcIApNi9n6zEhDt6LvRa7TdV5kunE1a1aB_-QaBVsYx36hcsOGN48kN6SoZ62S1pMMlulLr3R5hRA"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
-        <div className="relative z-10 container mx-auto w-full">
+        <div className="relative z-10 container mx-auto w-full px-6">
           <div className="max-w-2xl glass-card p-10 rounded-2xl bg-white/10 text-white">
-            <h1 className="text-6xl font-extrabold mb-6 leading-tight">
+            <h1 className="md:text-6xl text-4xl font-extrabold mb-6 leading-tight">
               UGEL Huacaybamba
             </h1>
-            <p className="text-xl opacity-90 mb-10 leading-relaxed font-light">
-              Comprometidos con la excelencia educativa y el desarrollo integral
-              de nuestra comunidad estudiantil en Huánuco.
+            <p className="md:text-xl text-lg opacity-90 mb-10 leading-relaxed font-light">
+              Comprometidos con la excelencia educativa y el desarrollo
+              integral de nuestra comunidad estudiantil en Huánuco.
             </p>
-            <div className="flex gap-4">
+            <div className="flex md:flex-row flex-col gap-4">
               <button className="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg flex items-center gap-2 group">
                 Conoce Más{" "}
                 <span className="material-symbols-rounded group-hover:translate-x-1 transition-transform">
@@ -37,7 +37,7 @@ const About = () => {
       </header>
 
       {/* Nuestra Institución */}
-      <section className="py-24 container mx-auto">
+      <section className="py-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-8 text-slate-900 dark:text-white">
@@ -77,7 +77,7 @@ const About = () => {
       </section>
 
       {/* Identidad Institucional */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/50 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
@@ -148,7 +148,7 @@ const About = () => {
       </section>
 
       {/* Vinculación con la Comunidad Educativa */}
-      <section className="py-24 container mx-auto">
+      <section className="py-24 container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
             Vinculación con la Comunidad Educativa
@@ -203,7 +203,7 @@ const About = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-slate-100 dark:bg-slate-800/30 border-t border-slate-200 dark:border-slate-800">
+      <section className="py-24 bg-slate-100 dark:bg-slate-800/30 border-t border-slate-200 dark:border-slate-800 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 dark:text-white">

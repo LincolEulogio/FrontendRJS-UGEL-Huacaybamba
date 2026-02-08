@@ -5,7 +5,7 @@ const Vision = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative h-[80vh] min-h-[700px] flex items-center overflow-hidden px-6">
         <div className="absolute inset-0">
           <img
             alt="Huacaybamba Mountains"
@@ -49,8 +49,8 @@ const Vision = () => {
       </section>
 
       {/* Misión y Visión */}
-      <section className="py-32 px-6" id="mision">
-        <div className="container mx-auto">
+      <section className="py-32" id="mision">
+        <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Misión Card */}
             <div className="relative group p-12 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl transition-all hover:-translate-y-2 overflow-hidden">

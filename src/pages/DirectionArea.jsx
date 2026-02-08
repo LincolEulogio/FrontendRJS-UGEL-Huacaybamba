@@ -29,7 +29,7 @@ const DirectionArea = () => {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-background-dark relative overflow-hidden">
+    <div className="bg-background-light dark:bg-background-dark px-6 relative overflow-hidden">
       <div className="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 animate-pulse"></div>
       <div className="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-3xl opacity-30"></div>
 
