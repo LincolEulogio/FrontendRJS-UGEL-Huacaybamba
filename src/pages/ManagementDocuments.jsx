@@ -3,7 +3,7 @@ import React from "react";
 const ManagementDocuments = () => {
   return (
     <div className="font-display mesh-gradient min-h-screen text-slate-900 overflow-x-hidden">
-      <section className="pt-24 pb-32 px-12 max-w-[1920px] mx-auto text-center relative">
+      <section className="pt-24 pb-32 container mx-auto text-center relative">
         <div className="max-w-4xl mx-auto">
           <span className="inline-block py-2 px-4 rounded-full bg-blue-50 text-[var(--primary)] text-xs font-bold uppercase tracking-[0.2em] mb-8">
             Transparencia y Gestión Eficiente
@@ -38,7 +38,7 @@ const ManagementDocuments = () => {
         </div>
       </section>
 
-      <main className="px-12 pb-32 max-w-[1920px] mx-auto">
+      <main className="container mx-auto pb-32">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
           <h3 className="text-2xl font-bold text-[var(--secondary)] flex items-center gap-3">
             <span className="w-10 h-1 bg-[var(--primary)] rounded-full"></span>

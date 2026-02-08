@@ -10,7 +10,7 @@ const MainLayout = () => {
     <div className="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white min-h-screen flex flex-col">
       {/* Top Bar */}
       <div className="bg-secondary text-white/80 py-2 hidden lg:block border-b border-white/10">
-        <div className="max-w-[1600px] mx-auto px-6 flex justify-between items-center text-xs font-medium uppercase tracking-wider">
+        <div className="container mx-auto flex justify-between items-center text-xs font-medium uppercase tracking-wider">
           <div className="flex gap-6">
             <a
               href="#"
@@ -59,7 +59,7 @@ const MainLayout = () => {
 
       {/* Header */}
       <header className="glass-nav sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl">
-        <nav className="max-w-[1600px] mx-auto px-6 h-20 flex items-center justify-between">
+        <nav className="container mx-auto h-20 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-4">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1 shadow-sm">
               <img
@@ -409,7 +409,7 @@ const MainLayout = () => {
 
       {/* Footer */}
       <footer className="bg-secondary text-white mt-20">
-        <div className="max-w-[1600px] mx-auto px-6 py-16">
+        <div className="container mx-auto py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             {/* Column 1 - About */}
             <div>
