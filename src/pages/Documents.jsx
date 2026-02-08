@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Documents = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("Todos");
 
   const featuredDocs = [
     {
@@ -60,8 +61,22 @@ const Documents = () => {
     },
   ];
 
+  const categories = [
+    "Todos",
+    ...new Set(documents.map((doc) => doc.category)),
+  ];
+
+  const filteredDocuments = documents.filter((doc) => {
+    const matchesSearch = doc.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "Todos" || doc.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen">
+    <div className="bg-background-light dark:bg-background-dark min-h-screen px-6">
       <div className="container mx-auto py-12">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row gap-8 mb-12">
@@ -101,6 +116,23 @@ const Documents = () => {
           </div>
         </div>
 
+        {/* Filters */}
+        <div className="flex flex-wrap gap-3 mb-8">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
+                selectedCategory === category
+                  ? "bg-primary text-white shadow-lg shadow-primary/30"
+                  : "bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         {/* Featured Documents */}
         <h2 className="text-2xl font-bold mb-6">Documentos Destacados</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -123,7 +155,8 @@ const Documents = () => {
 
         {/* All Documents */}
         <h2 className="text-2xl font-bold mb-6">Todos los Documentos</h2>
-        <div className="glass rounded-xl overflow-hidden">
+        {/* Desktop/Tablet Table View */}
+        <div className="hidden md:block glass rounded-xl overflow-hidden">
           <table className="w-full">
             <thead>
               <tr className="bg-white dark:bg-slate-800">
@@ -142,27 +175,61 @@ const Documents = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
-              {documents.map((doc, index) => (
+              {filteredDocuments.map((doc, index) => (
                 <tr
                   key={index}
                   className="hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 >
-                  <td className="px-4 py-4 text-sm">{doc.name}</td>
+                  <td className="px-4 py-4 text-sm font-medium">{doc.name}</td>
                   <td className="px-4 py-4">
-                    <button className="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-xl text-sm font-medium">
+                    <span className="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-bold uppercase tracking-wide">
                       {doc.category}
-                    </button>
+                    </span>
                   </td>
                   <td className="px-4 py-4 text-sm text-slate-500">
                     {doc.date}
                   </td>
-                  <td className="px-4 py-4 text-sm font-bold text-primary cursor-pointer hover:underline">
-                    Descargar
+                  <td className="px-4 py-4">
+                    <button className="text-primary font-bold hover:underline flex items-center gap-1 text-sm">
+                      Descargar
+                      <span className="material-symbols-rounded text-lg">
+                        download
+                      </span>
+                    </button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card View */}
+        <div className="md:hidden space-y-4">
+          {filteredDocuments.map((doc, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4"
+            >
+              <div className="flex justify-between items-start">
+                <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wide">
+                  {doc.category}
+                </span>
+                <span className="text-slate-400 text-xs flex items-center gap-1">
+                  <span className="material-symbols-rounded text-sm">
+                    calendar_today
+                  </span>
+                  {doc.date}
+                </span>
+              </div>
+              <h3 className="font-bold text-lg leading-tight dark:text-white">
+                {doc.name}
+              </h3>
+              <button className="w-full bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-colors">
+                <span className="material-symbols-rounded">download</span>
+                Descargar Documento
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </div>

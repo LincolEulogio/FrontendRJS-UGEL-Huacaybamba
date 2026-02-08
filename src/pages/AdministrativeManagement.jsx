@@ -6,13 +6,13 @@ const AdministrativeManagement = () => {
       title: "Recursos Humanos",
       description:
         "Gestión integral del personal administrativo y docente, incluyendo planillas, legajos y beneficios.",
-      color: "blue",
+      color: "slate",
     },
     {
       title: "Optimización de Recursos",
       description:
         "Administración eficiente de recursos materiales, financieros y logísticos de la institución.",
-      color: "emerald",
+      color: "slate",
     },
   ];
 
@@ -104,7 +104,7 @@ const AdministrativeManagement = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 ">
       {/* Hero Section */}
       <section className="relative h-[450px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af] to-[#2563eb]">
@@ -132,7 +132,7 @@ const AdministrativeManagement = () => {
       </section>
 
       {/* Objectives Section */}
-      <section className="container mx-auto py-20">
+      <section className="container mx-auto py-20 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-800 mb-4">
             Nuestros Objetivos
@@ -144,10 +144,10 @@ const AdministrativeManagement = () => {
           {objectives.map((obj, index) => (
             <div
               key={index}
-              className={`bg-${obj.color}-100 rounded-[24px] p-8 border-2 border-${obj.color}-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+              className={`bg-${obj.color}-100 rounded-[24px] p-8 border-2 border-${obj.color}-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-slate-50`}
             >
               <div
-                className={`inline-flex px-4 py-1 bg-${obj.color}-500 text-white rounded-full text-sm font-bold mb-4`}
+                className={`inline-flex px-4 py-1 bg-${obj.color}-300 text-slate-900 rounded-full text-sm font-bold mb-4`}
               >
                 Objetivo {index + 1}
               </div>
@@ -163,7 +163,7 @@ const AdministrativeManagement = () => {
       </section>
 
       {/* Functions Section */}
-      <section className="container mx-auto py-20">
+      <section className="container mx-auto py-20 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-800 mb-4">
             Funciones Principales
@@ -192,7 +192,7 @@ const AdministrativeManagement = () => {
       </section>
 
       {/* Team Section */}
-      <section className="container mx-auto py-20">
+      <section className="container mx-auto py-20 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-800 mb-4">
             Nuestro Equipo

@@ -35,7 +35,7 @@ const LegalAdvisory = () => {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen">
+    <div className="bg-background-light dark:bg-background-dark min-h-screen px-6">
       <main className="pt-12 pb-24 container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

@@ -96,7 +96,7 @@ const PedagogicalManagement = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark">
+    <div className="min-h-screen bg-background-light dark:bg-background-dark ">
       <header className="relative overflow-hidden py-24">
         <div className="absolute inset-0 z-0">
           <img
@@ -122,7 +122,7 @@ const PedagogicalManagement = () => {
         </div>
       </header>
 
-      <main className="container mx-auto space-y-24 pb-24">
+      <main className="container mx-auto space-y-24 px-6 pb-24">
         <section>
           <div className="flex items-center gap-3 mb-10">
             <span className="h-px w-12 bg-primary"></span>

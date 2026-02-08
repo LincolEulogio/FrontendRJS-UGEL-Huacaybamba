@@ -44,9 +44,9 @@ const DirectionArea = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-12 grid-rows-6 gap-6 h-[1000px] max-w-7xl mx-auto">
-          <div className="col-span-8 row-span-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-10 rounded-3xl shadow-xl relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-6 gap-6 lg:h-[1000px] h-auto max-w-7xl mx-auto">
+          <div className="md:col-span-2 lg:col-span-8 lg:row-span-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-10 rounded-3xl shadow-xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-700 hidden lg:block">
               <span className="material-symbols-rounded text-[120px]">
                 track_changes
               </span>
@@ -60,13 +60,13 @@ const DirectionArea = () => {
                   Objetivos
                 </h2>
               </div>
-              <div className="grid grid-cols-2 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-300">
                   Implementar políticas y directivas locales, para fortalecer el
                   servicio que brindan las instituciones educativas, en el marco
                   de coadyuvar en la formación integral de las personas.
                 </p>
-                <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-300 border-l border-slate-200 dark:border-slate-700 pl-10">
+                <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-300 md:border-l md:border-slate-200 md:dark:border-slate-700 md:pl-10 border-l-0 pl-0 border-t pt-6 md:border-t-0 md:pt-0 border-slate-200 dark:border-slate-700">
                   Administrar el proceso de fortalecimiento de las capacidades
                   de gestión pedagógica y administrativa de las instituciones
                   educativas para impulsar el mejoramiento de la calidad.
@@ -82,7 +82,7 @@ const DirectionArea = () => {
             </div>
           </div>
 
-          <div className="col-span-4 row-span-4 bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-8 rounded-3xl shadow-xl flex flex-col">
+          <div className="md:col-span-1 lg:col-span-4 lg:row-span-4 bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-8 rounded-3xl shadow-xl flex flex-col">
             <div className="flex items-center gap-3 mb-8">
               <span className="p-2 bg-primary/10 rounded-lg text-primary">
                 <span className="material-symbols-rounded">account_tree</span>
@@ -121,7 +121,7 @@ const DirectionArea = () => {
             </div>
           </div>
 
-          <div className="col-span-8 row-span-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-10 rounded-3xl shadow-xl flex flex-col">
+          <div className="md:col-span-2 lg:col-span-8 lg:row-span-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-10 rounded-3xl shadow-xl flex flex-col md:order-last lg:order-none">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-3">
                 <span className="p-2 bg-primary/10 rounded-lg text-primary">
@@ -135,7 +135,7 @@ const DirectionArea = () => {
                 CUADRO ORGÁNICO
               </span>
             </div>
-            <div className="grid grid-cols-3 gap-6 flex-grow">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-grow">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
@@ -174,7 +174,7 @@ const DirectionArea = () => {
             </div>
           </div>
 
-          <div className="col-span-4 row-span-2 relative group overflow-hidden rounded-3xl shadow-xl">
+          <div className="md:col-span-1 lg:col-span-4 lg:row-span-2 relative group overflow-hidden rounded-3xl shadow-xl h-64 md:h-auto">
             <img
               alt="Oficinas"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"

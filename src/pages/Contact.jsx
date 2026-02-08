@@ -37,7 +37,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen">
+    <div className="bg-background-light dark:bg-background-dark min-h-screen ">
       <main className="container mx-auto flex flex-col lg:flex-row min-h-screen relative">
         {/* Sidebar */}
         <aside className="w-full lg:w-[40%] lg:sticky lg:top-0 h-auto lg:h-screen p-8 lg:p-12 flex flex-col justify-between">
