@@ -23,9 +23,16 @@ const Home = () => {
       <HeroSlider />
 
       {/* Aplicativos de Interés */}
-      <section className="max-w-6xl mx-auto py-20 relative z-10">
+      <section
+        className="max-w-6xl mx-auto py-20 relative z-10"
+        data-aos="fade-up"
+      >
         <div className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl rounded-[32px] p-10 shadow-2xl border border-white/20 dark:border-slate-700/50">
-          <div className="text-center mb-10">
+          <div
+            className="text-center mb-10"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
             <h2 className="text-3xl font-extrabold mb-2 dark:text-white">
               Aplicativos de Interés
             </h2>
@@ -35,8 +42,12 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <div className="group bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl border border-blue-100 dark:border-blue-800/50 hover:shadow-xl hover:shadow-blue-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center">
-              <div className="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
+            <div
+              className="group bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl border border-blue-100 dark:border-blue-800/50 hover:shadow-xl hover:shadow-blue-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div className="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
                 <span className="material-symbols-rounded text-3xl">
                   folder_shared
                 </span>
@@ -48,8 +59,12 @@ const Home = () => {
                 Seguimiento en línea
               </p>
             </div>
-            <div className="group bg-emerald-50 dark:bg-emerald-900/20 p-6 rounded-2xl border border-emerald-100 dark:border-emerald-800/50 hover:shadow-xl hover:shadow-emerald-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center">
-              <div className="w-14 h-14 bg-emerald-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/30">
+            <div
+              className="group bg-emerald-50 dark:bg-emerald-900/20 p-6 rounded-2xl border border-emerald-100 dark:border-emerald-800/50 hover:shadow-xl hover:shadow-emerald-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div className="w-14 h-14 bg-emerald-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
                 <span className="material-symbols-rounded text-3xl">
                   campaign
                 </span>
@@ -61,8 +76,12 @@ const Home = () => {
                 Procesos vigentes
               </p>
             </div>
-            <div className="group bg-purple-50 dark:bg-purple-900/20 p-6 rounded-2xl border border-purple-100 dark:border-purple-800/50 hover:shadow-xl hover:shadow-purple-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center">
-              <div className="w-14 h-14 bg-purple-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-purple-500/30">
+            <div
+              className="group bg-purple-50 dark:bg-purple-900/20 p-6 rounded-2xl border border-purple-100 dark:border-purple-800/50 hover:shadow-xl hover:shadow-purple-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div className="w-14 h-14 bg-purple-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
                 <span className="material-symbols-rounded text-3xl">
                   school
                 </span>
@@ -72,8 +91,12 @@ const Home = () => {
                 Oportunidades
               </p>
             </div>
-            <div className="group bg-amber-50 dark:bg-amber-900/20 p-6 rounded-2xl border border-amber-100 dark:border-amber-800/50 hover:shadow-xl hover:shadow-amber-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center">
-              <div className="w-14 h-14 bg-amber-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-amber-500/30">
+            <div
+              className="group bg-amber-50 dark:bg-amber-900/20 p-6 rounded-2xl border border-amber-100 dark:border-amber-800/50 hover:shadow-xl hover:shadow-amber-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div className="w-14 h-14 bg-amber-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
                 <span className="material-symbols-rounded text-3xl">
                   article
                 </span>
@@ -85,8 +108,12 @@ const Home = () => {
                 Normativas oficiales
               </p>
             </div>
-            <div className="group bg-rose-50 dark:bg-rose-900/20 p-6 rounded-2xl border border-rose-100 dark:border-rose-800/50 hover:shadow-xl hover:shadow-rose-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center">
-              <div className="w-14 h-14 bg-rose-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-rose-500/30">
+            <div
+              className="group bg-rose-50 dark:bg-rose-900/20 p-6 rounded-2xl border border-rose-100 dark:border-rose-800/50 hover:shadow-xl hover:shadow-rose-200/50 dark:hover:shadow-none transition-all duration-300 hover:-translate-y-2 cursor-pointer text-center"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
+              <div className="w-14 h-14 bg-rose-600 text-white rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-rose-500/30 group-hover:scale-110 transition-transform">
                 <span className="material-symbols-rounded text-3xl">
                   handshake
                 </span>
@@ -106,13 +133,18 @@ const Home = () => {
       <section className="relative h-auto overflow-hidden py-16 px-6">
         <img
           alt="Vista Panorámica de Huacaybamba"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover scale-110"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdj3cfxtHOQZ1JlWN_npzr_iWL1Sjl5rkPWHjAYsds0ks0mpZzXUfOh_XKbGEaiiXQdswDBVoOtfMj3DAlZ6nZY-ez7nf4mE1g8eHtUB3IJUwkuRVG8S4BH4FTI00Xd9z_XYWQY8S5hVaan805ZSHkT2cTSan1pZnqSt8-FSmvvPhwtfTTQrcetYLWxr1L82mjAU-ARUEIDm9Ot0F5uDwBkpHn-ahP31_gvJpxnGXEOaMKb31-HmB7eNNQMq6dwNjJXHangf7Q8DE"
+          data-aos="fade"
+          data-aos-duration="1500"
         />
-        <div className="absolute inset-0 bg-slate-900/40"></div>
+        <div className="absolute inset-0 bg-slate-900/50"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
         <div className="relative z-10 container mx-auto flex flex-col min-[1440px]:flex-row items-center gap-6 min-[1440px]:gap-10">
-          <div className="w-full min-[1440px]:w-1/4 text-center min-[1440px]:text-left">
+          <div
+            className="w-full min-[1440px]:w-1/4 text-center min-[1440px]:text-left"
+            data-aos="fade-right"
+          >
             <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
               Acceso a Servicios y Transparencia
             </h2>
@@ -122,9 +154,13 @@ const Home = () => {
           </div>
           <div className="w-full min-[1440px]:w-3/4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+              <div
+                className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg group-hover:scale-110 transition-transform">
                     visibility
                   </span>
                   <h3 className="font-bold text-base md:text-lg leading-tight">
@@ -144,9 +180,13 @@ const Home = () => {
                   </span>
                 </a>
               </div>
-              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+              <div
+                className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg group-hover:scale-110 transition-transform">
                     warning
                   </span>
                   <h3 className="font-bold text-base md:text-lg leading-tight">
@@ -166,9 +206,13 @@ const Home = () => {
                   </span>
                 </a>
               </div>
-              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+              <div
+                className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg group-hover:scale-110 transition-transform">
                     request_quote
                   </span>
                   <h3 className="font-bold text-base md:text-lg leading-tight">
@@ -188,9 +232,13 @@ const Home = () => {
                   </span>
                 </a>
               </div>
-              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+              <div
+                className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg group-hover:scale-110 transition-transform">
                     forum
                   </span>
                   <h3 className="font-bold text-base md:text-lg leading-tight">
@@ -242,6 +290,8 @@ const Home = () => {
               key={index}
               className="group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-500 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all flex flex-col items-center text-center justify-center min-h-[160px]"
               href="#"
+              data-aos="fade-up"
+              data-aos-delay={index * 50}
             >
               <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 <span className="material-symbols-rounded text-4xl text-blue-600">
@@ -267,8 +317,15 @@ const Home = () => {
               Comprometidos con el desarrollo educativo de Huacaybamba.
             </p>
           </div>
-          <div className="bg-white dark:bg-slate-800 rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row items-center border border-slate-100 dark:border-slate-700">
-            <div className="lg:w-1/2 p-12 lg:p-20">
+          <div
+            className="bg-white dark:bg-slate-800 rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row items-center border border-slate-100 dark:border-slate-700"
+            data-aos="zoom-in"
+          >
+            <div
+              className="lg:w-1/2 p-12 lg:p-20"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <span className="inline-block bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 px-6 py-2 rounded-full font-bold text-sm mb-8">
                 Gestión Vigente 2024 - 2026
               </span>
@@ -299,7 +356,7 @@ const Home = () => {
                 </div>
                 <div className="flex gap-2">
                   <a
-                    className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
+                    className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"
                     href="#"
                   >
                     <span className="material-symbols-rounded text-lg">
@@ -307,7 +364,7 @@ const Home = () => {
                     </span>
                   </a>
                   <a
-                    className="w-10 h-10 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center hover:bg-sky-600 hover:text-white transition-all"
+                    className="w-10 h-10 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center hover:bg-sky-600 hover:text-white transition-all transform hover:scale-110"
                     href="#"
                   >
                     <span className="material-symbols-rounded text-lg">
@@ -315,7 +372,7 @@ const Home = () => {
                     </span>
                   </a>
                   <a
-                    className="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"
+                    className="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition-all transform hover:scale-110"
                     href="#"
                   >
                     <span className="material-symbols-rounded text-lg">
@@ -325,14 +382,16 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:w-1/2 relative bg-slate-50 dark:bg-slate-900/50 self-stretch flex justify-center items-end pt-20">
+            <div className="lg:w-1/2 relative bg-slate-50 dark:bg-slate-900/50 self-stretch flex justify-center items-end pt-20 overflow-hidden">
               <img
                 alt="Director UGEL"
-                className="w-[80%] h-[90%] object-cover object-top rounded-t-full shadow-2xl border-x-8 border-t-8 border-white dark:border-slate-800"
+                className="w-[80%] h-[90%] object-cover object-top rounded-t-full shadow-2xl border-x-8 border-t-8 border-white dark:border-slate-800 transition-transform duration-700 hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlo7xPFH2-4zFjkLX1JWlliXBhJbxAut0IjIGeo9m4AFgY0GB4YBGsttrvpq7y8MJAB9C6JpcXOiU2FL2pm7CB8WKVZ9M9NHlfklax0PocmOhC65IEGQ9CPMpyVbZly4bBJJl0Wf3Hol-IzPkXpAN08DiBTRcs7Fbf5n7pXncYSWaUuH9msQ2_nb7c_nVBDzNDX1gOtU-A_82TNLSlChfa6AN9zShsF83Jj89ojoP0UOT_0DE8s7BOXcCrkiaqJ8rIEHUIble01eQ"
+                data-aos="fade-up"
+                data-aos-delay="400"
               />
-              <div className="absolute bottom-10 right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-              <div className="absolute top-10 left-10 w-32 h-32 bg-amber-400/20 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-10 right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute top-10 left-10 w-32 h-32 bg-amber-400/20 rounded-full blur-3xl animate-pulse"></div>
             </div>
           </div>
         </div>
@@ -385,33 +444,35 @@ const Home = () => {
           ].map((person, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all group"
+              className="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <div className="relative mb-6 overflow-hidden rounded-2xl aspect-square">
                 <img
                   alt={person.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   src={person.image}
                 />
-                <div className="absolute bottom-4 left-4 right-4 flex justify-center gap-2 translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
-                  <button className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-800 hover:bg-primary hover:text-white transition-colors">
+                <div className="absolute bottom-4 left-4 right-4 flex justify-center gap-2 translate-y-24 group-hover:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]">
+                  <button className="w-12 h-12 bg-white/95 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-slate-800 hover:bg-primary hover:text-white transition-all transform hover:scale-110">
                     <span className="material-symbols-rounded text-xl">
                       mail
                     </span>
                   </button>
-                  <button className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-800 hover:bg-primary hover:text-white transition-colors">
+                  <button className="w-12 h-12 bg-white/95 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-slate-800 hover:bg-primary hover:text-white transition-all transform hover:scale-110">
                     <span className="material-symbols-rounded text-xl">
                       call
                     </span>
                   </button>
-                  <button className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-800 hover:bg-primary hover:text-white transition-colors">
+                  <button className="w-12 h-12 bg-white/95 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-slate-800 hover:bg-primary hover:text-white transition-all transform hover:scale-110">
                     <span className="material-symbols-rounded text-xl">
                       share
                     </span>
                   </button>
                 </div>
               </div>
-              <h4 className="font-bold text-2xl mb-1 dark:text-white">
+              <h4 className="font-bold text-2xl mb-1 dark:text-white group-hover:text-primary transition-colors">
                 {person.name}
               </h4>
               <p className="text-primary font-bold text-sm mb-4">
@@ -419,13 +480,13 @@ const Home = () => {
               </p>
               <div className="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-rounded text-lg">
+                  <span className="material-symbols-rounded text-lg text-primary/60">
                     alternate_email
                   </span>{" "}
                   {person.email}
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-rounded text-lg">
+                  <span className="material-symbols-rounded text-lg text-primary/60">
                     location_on
                   </span>{" "}
                   {person.location}
@@ -449,8 +510,13 @@ const Home = () => {
             { icon: "cast_for_education", number: "890", label: "Docentes" },
             { icon: "stars", number: "98%", label: "Nivel de Satisfacción" },
           ].map((stat, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6">
+            <div
+              key={index}
+              className="flex flex-col items-center"
+              data-aos="zoom-out"
+              data-aos-delay={index * 150}
+            >
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 transform transition-transform group-hover:rotate-12">
                 <span className="material-symbols-rounded text-4xl">
                   {stat.icon}
                 </span>
@@ -520,6 +586,8 @@ const Home = () => {
             <article
               key={index}
               className="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 dark:border-slate-700"
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
             >
               <div className="h-64 relative overflow-hidden">
                 <img
@@ -528,14 +596,14 @@ const Home = () => {
                   src={news.image}
                 />
                 <span
-                  className={`absolute top-4 left-4 bg-${news.badgeColor}-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest`}
+                  className={`absolute top-4 left-4 bg-${news.badgeColor}-500 text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg`}
                 >
                   {news.badge}
                 </span>
               </div>
               <div className="p-8">
                 <div className="flex items-center gap-4 text-slate-400 text-sm mb-4">
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 group-hover:text-primary transition-colors">
                     <span className="material-symbols-rounded text-base">
                       calendar_today
                     </span>{" "}
@@ -548,7 +616,7 @@ const Home = () => {
                     {news.author}
                   </span>
                 </div>
-                <h3 className="font-extrabold text-2xl mb-4 group-hover:text-primary transition-colors dark:text-white">
+                <h3 className="font-extrabold text-2xl mb-4 group-hover:text-primary transition-colors dark:text-white leading-tight">
                   {news.title}
                 </h3>
                 <p className="text-slate-500 dark:text-slate-400 mb-8 line-clamp-3">
@@ -613,25 +681,27 @@ const Home = () => {
             ].map((conv, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row gap-8 items-start hover:shadow-xl transition-all group"
+                className="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row gap-8 items-start hover:shadow-2xl transition-all group"
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={index * 200}
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
+                    <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
                       Cierre: {conv.deadline}
                     </span>
-                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
+                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
                       {conv.code}
                     </span>
                   </div>
-                  <h3 className="text-2xl font-extrabold mb-4 group-hover:text-primary transition-colors dark:text-white">
+                  <h3 className="text-2xl font-extrabold mb-4 group-hover:text-primary transition-colors dark:text-white leading-tight">
                     {conv.title}
                   </h3>
                   <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
                     {conv.description}
                   </p>
                   <div className="flex items-center gap-6 text-xs font-bold text-slate-400">
-                    <span className="flex items-center gap-1">
+                    <span className="flex items-center gap-1 group-hover:text-primary transition-colors">
                       <span className="material-symbols-rounded text-sm">
                         schedule
                       </span>{" "}
@@ -645,7 +715,7 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <button className="w-full md:w-auto bg-primary text-white px-8 py-4 rounded-2xl font-bold hover:shadow-lg hover:shadow-primary/30 transition-all self-center">
+                <button className="w-full md:w-auto bg-primary text-white px-8 py-4 rounded-2xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all self-center transform hover:scale-105">
                   Ver Detalles
                 </button>
               </div>

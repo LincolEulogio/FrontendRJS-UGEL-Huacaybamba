@@ -37,36 +37,40 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen ">
+    <div className="bg-background-light dark:bg-background-dark min-h-screen">
       <main className="max-w-6xl mx-auto flex flex-col lg:flex-row min-h-screen relative">
         {/* Sidebar */}
         <aside className="w-full lg:w-[40%] lg:sticky lg:top-0 h-auto lg:h-screen p-8 lg:p-12 flex flex-col justify-between">
           <div className="space-y-8">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+            <div className="flex items-center gap-4" data-aos="fade-down">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/30">
                 <span className="material-symbols-rounded text-3xl">
                   account_balance
                 </span>
               </div>
               <div>
-                <h1 className="text-2xl font-extrabold tracking-tight uppercase">
+                <h1 className="text-2xl font-extrabold tracking-tight uppercase leading-none dark:text-white">
                   UGEL Huacaybamba
                 </h1>
-                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mt-1">
                   Dirección Regional de Educación
                 </p>
               </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-2xl shadow-2xl h-[400px] lg:h-[500px]">
+            <div
+              className="relative group overflow-hidden rounded-2xl shadow-2xl h-[400px] lg:h-[500px]"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInFmrr7BFZKW5UfNEW3km1FRxWeZsdVCuvC1avpRkVXlcsrkaaAX8Lge_n-8yiJyyanD-vGLyLDI0sjSdfCLFGe2u9RiYbK3kv2RF1JYZ9al91Uq90lew7-fWnUxHlNVCdiNpnx4OIZ2X16dTfmiP0SYPIyJItOeZxk5B6cJAWrRxKbrSn77OxD1sSF5f_Jdup9Kq5P1AfExzUUJIrTd7Y3HIz_slIlye1TEzfPm_ntG4yacqanhVsOkcLKRH57tJhIqDesci3B0"
                 alt="UGEL Building"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="glass p-6 rounded-2xl text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-8 w-full group-hover:translate-y-[-5px] transition-transform duration-500">
+                <div className="glass-effect p-6 rounded-2xl text-white">
                   <h2 className="text-xl font-bold mb-2">
                     Visítanos en Sede Central
                   </h2>
@@ -82,17 +86,17 @@ const Contact = () => {
           </div>
 
           <div className="mt-12 space-y-4">
-            <p className="text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+            <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
               Atención al Usuario
             </p>
-            <div className="flex flex-col gap-2">
-              <span className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+            <div className="flex flex-col gap-3">
+              <span className="flex items-center gap-2 text-slate-600 dark:text-slate-300 font-medium">
                 <span className="material-symbols-rounded text-primary">
                   phone
                 </span>
                 998 872 733
               </span>
-              <span className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+              <span className="flex items-center gap-2 text-slate-600 dark:text-slate-300 font-medium">
                 <span className="material-symbols-rounded text-primary">
                   mail
                 </span>
@@ -103,16 +107,16 @@ const Contact = () => {
         </aside>
 
         {/* Main Content */}
-        <section className="w-full lg:w-[60%] bg-slate-100/50 dark:bg-slate-900/50 p-8 lg:p-12">
+        <section className="w-full lg:w-[60%] bg-slate-50 dark:bg-slate-900/50 p-8 lg:p-12 border-l border-slate-100 dark:border-slate-800">
           <div className="max-w-4xl mx-auto">
-            <header className="mb-12">
-              <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">
+            <header className="mb-12" data-aos="fade-up">
+              <span className="text-primary font-bold tracking-widest uppercase text-[10px] mb-2 block">
                 Directorio de Contacto
               </span>
-              <h2 className="text-4xl lg:text-5xl font-extrabold mb-4">
+              <h2 className="text-4xl lg:text-5xl font-extrabold mb-4 dark:text-white leading-tight">
                 Nuestro Equipo <span className="text-primary">Estratégico</span>
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 max-w-xl text-lg">
+              <p className="text-slate-500 dark:text-slate-400 max-w-xl text-lg">
                 Estamos aquí para apoyarte. Conéctate directamente con los
                 responsables de cada área para una atención personalizada.
               </p>
@@ -122,32 +126,36 @@ const Contact = () => {
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="glass p-6 rounded-2xl flex flex-col gap-4 hover:-translate-y-2 transition-transform"
+                  className="bg-white dark:bg-slate-800 p-6 rounded-2xl flex flex-col gap-4 hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700 group"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex gap-4">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-16 h-16 rounded-xl object-cover ring-2 ring-primary/20"
-                      />
+                      <div className="relative overflow-hidden rounded-xl">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-16 h-16 object-cover ring-2 ring-primary/20 group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
                       <div>
-                        <h3 className="font-bold text-lg leading-tight">
+                        <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors dark:text-white">
                           {member.name}
                         </h3>
-                        <p className="text-primary font-semibold text-sm">
+                        <p className="text-primary font-bold text-sm">
                           {member.role}
                         </p>
                       </div>
                     </div>
-                    <span className="material-symbols-rounded text-slate-300 dark:text-slate-700">
+                    <span className="material-symbols-rounded text-slate-300 dark:text-slate-700 group-hover:text-amber-400 transition-colors">
                       stars
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2 mt-auto">
                     <a
                       href={`mailto:${member.email}`}
-                      className="flex-1 flex items-center justify-center gap-2 bg-primary text-white py-3 px-4 rounded-xl font-semibold hover:opacity-90 transition-all text-sm"
+                      className="flex-1 flex items-center justify-center gap-2 bg-primary text-white py-3 px-4 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/30 transition-all text-sm transform active:scale-95"
                     >
                       <span className="material-symbols-rounded text-lg">
                         alternate_email
@@ -157,7 +165,7 @@ const Contact = () => {
                     {member.whatsapp && (
                       <a
                         href={`https://wa.me/${member.whatsapp}`}
-                        className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 px-4 rounded-xl font-semibold hover:opacity-90 transition-all text-sm"
+                        className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 px-4 rounded-xl font-bold hover:shadow-lg hover:shadow-green-500/30 transition-all text-sm transform active:scale-95"
                       >
                         <span className="material-symbols-rounded text-lg">
                           chat
@@ -170,19 +178,22 @@ const Contact = () => {
               ))}
 
               {/* CTA Card */}
-              <div className="glass p-8 rounded-2xl md:col-span-2 flex flex-col md:flex-row gap-4 items-center justify-between bg-primary text-white border-none">
+              <div
+                className="bg-primary p-8 rounded-[30px] md:col-span-2 flex flex-col md:flex-row gap-6 items-center justify-between text-white shadow-2xl shadow-primary/20"
+                data-aos="zoom-in"
+              >
                 <div className="space-y-2">
-                  <h4 className="text-2xl font-bold">
+                  <h4 className="text-3xl font-black">
                     ¿Necesitas ayuda adicional?
                   </h4>
-                  <p className="opacity-80">
+                  <p className="opacity-80 font-medium">
                     Si tienes dudas sobre el Libro de Reclamaciones o
-                    transparencia.
+                    transparencia institucional.
                   </p>
                 </div>
                 <a
                   href="#"
-                  className="bg-white text-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform w-full md:w-auto justify-center"
+                  className="bg-white text-primary px-8 py-4 rounded-2xl font-black flex items-center gap-2 hover:scale-105 transition-all w-full md:w-auto justify-center shadow-xl transform active:scale-95"
                 >
                   Ver FAQ{" "}
                   <span className="material-symbols-rounded">
