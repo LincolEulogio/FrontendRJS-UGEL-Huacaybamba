@@ -39,8 +39,11 @@ const App = () => {
 
     requestAnimationFrame(raf);
 
+    window.lenis = lenis;
+
     return () => {
       lenis.destroy();
+      window.lenis = null;
     };
   }, []);
 
@@ -50,5 +53,5 @@ const App = () => {
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );

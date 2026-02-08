@@ -16,6 +16,29 @@
   html {
     scroll-behavior: initial;
   }
+
+  /* Professional Cursor - Only on desktop */
+  @media (min-width: 1024px) {
+    *,
+    a,
+    button,
+    [role="button"],
+    input,
+    textarea {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Advanced Cursor Animations */
+@keyframes cursor-float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-5px);
+  }
 }
 
 .mesh-gradient {
