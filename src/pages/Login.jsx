@@ -1,7 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [dni, setDni] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (dni === "12345678" && password === "123456") {
+      navigate("/perfil");
+    } else {
+      setError("Credenciales incorrectas (Prueba: 12345678 / 123456)");
+    }
+  };
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark px-4 font-sans transition-colors duration-300">
       {/* Abstract Background Decoration */}
@@ -39,7 +52,8 @@ const Login = () => {
               Bienvenido de nuevo. Por favor, ingresa tus credenciales.
             </p>
           </div>
-          <form className="space-y-6">
+
+          <form onSubmit={handleLogin} className="space-y-6">
             <div className="space-y-2">
               <label className="block text-sm font-bold text-slate-700 ml-1">
                 DNI
@@ -49,6 +63,8 @@ const Login = () => {
                   badge
                 </span>
                 <input
+                  value={dni}
+                  onChange={(e) => setDni(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 bg-white/50 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-800 placeholder:text-slate-400 font-medium"
                   placeholder="Ingrese su número de DNI"
                   type="text"
@@ -72,12 +88,21 @@ const Login = () => {
                   lock
                 </span>
                 <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 bg-white/50 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-800 placeholder:text-slate-400 font-medium"
                   placeholder="••••••••"
                   type="password"
                 />
               </div>
             </div>
+
+            {error && (
+              <p className="text-red-500 text-sm font-bold text-center">
+                {error}
+              </p>
+            )}
+
             <button
               className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg clay-button flex items-center justify-center gap-2 shadow-clay hover:-translate-y-1 transition-transform"
               type="submit"
