@@ -86,7 +86,14 @@ const Navbar = () => {
         },
       ],
     },
-    { name: "CONVOCATORIA", path: "/convocatorias", submenu: null },
+    {
+      name: "CONVOCATORIA",
+      path: "#",
+      submenu: [
+        { name: "Convocatorias", path: "/convocatorias", icon: "campaign" },
+        { name: "Resultados", path: "/resultados", icon: "emoji_events" },
+      ],
+    },
     { name: "CONTACTO", path: "/contacto", submenu: null },
   ];
 

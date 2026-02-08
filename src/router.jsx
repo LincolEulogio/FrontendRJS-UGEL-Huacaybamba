@@ -32,6 +32,7 @@ import AdminLogin from "./pages/AdminLogin";
 import StudentProfile from "./pages/StudentProfile";
 import AdminDashboard from "./pages/AdminDashboard";
 import ApplicantDetail from "./pages/ApplicantDetail";
+import MeritResults from "./pages/MeritResults";
 
 const router = createBrowserRouter([
   // Public Routes (Website)
@@ -67,6 +68,9 @@ const router = createBrowserRouter([
   // Auth Routes
   { path: "/login", element: <Login /> },
   { path: "/admin/login", element: <AdminLogin /> },
+
+  // Standalone Public Routes (Visual unique layouts)
+  { path: "/resultados", element: <MeritResults /> },
 
   // Applicant Layout Routes
   {
