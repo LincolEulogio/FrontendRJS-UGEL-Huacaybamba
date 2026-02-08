@@ -344,7 +344,7 @@ const Home = () => {
           </div>
           <a
             className="bg-slate-200 dark:bg-slate-800 px-6 py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-all"
-            href="#"
+            href="/directorio"
           >
             Ver todo el directorio
           </a>
