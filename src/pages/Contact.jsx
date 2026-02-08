@@ -64,36 +64,18 @@ const Contact = () => {
                 alt="UGEL Building"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <div className="glass p-6 rounded-2xl text-white">
                   <h2 className="text-xl font-bold mb-2">
                     Visítanos en Sede Central
                   </h2>
-                  <p className="text-sm opacity-90 flex items-center gap-2 mb-4">
+                  <p className="text-sm opacity-90 flex items-center gap-2">
                     <span className="material-symbols-rounded text-sm">
                       location_on
                     </span>
                     Av. 28 de Julio Nº 502 - 504, Huacaybamba, Perú
                   </p>
-                  <div className="flex gap-4">
-                    <a
-                      href="#"
-                      className="bg-white/20 hover:bg-white/30 backdrop-blur-md p-2 rounded-lg transition-colors"
-                    >
-                      <span className="material-symbols-rounded text-white">
-                        facebook
-                      </span>
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-white/20 hover:bg-white/30 backdrop-blur-md p-2 rounded-lg transition-colors"
-                    >
-                      <span className="material-symbols-rounded text-white">
-                        alternate_email
-                      </span>
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -188,7 +170,7 @@ const Contact = () => {
               ))}
 
               {/* CTA Card */}
-              <div className="glass p-8 rounded-2xl md:col-span-2 flex items-center justify-between bg-primary text-white border-none">
+              <div className="glass p-8 rounded-2xl md:col-span-2 flex flex-col md:flex-row gap-4 items-center justify-between bg-primary text-white border-none">
                 <div className="space-y-2">
                   <h4 className="text-2xl font-bold">
                     ¿Necesitas ayuda adicional?
@@ -200,7 +182,7 @@ const Contact = () => {
                 </div>
                 <a
                   href="#"
-                  className="bg-white text-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform"
+                  className="bg-white text-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform w-full md:w-auto justify-center"
                 >
                   Ver FAQ{" "}
                   <span className="material-symbols-rounded">
