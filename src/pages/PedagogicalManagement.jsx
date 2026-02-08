@@ -122,7 +122,7 @@ const PedagogicalManagement = () => {
         </div>
       </header>
 
-      <main className="container mx-auto space-y-24 px-6 pb-24">
+      <main className="max-w-6xl mx-auto space-y-24 px-6 pb-24">
         <section>
           <div className="flex items-center gap-3 mb-10">
             <span className="h-px w-12 bg-primary"></span>

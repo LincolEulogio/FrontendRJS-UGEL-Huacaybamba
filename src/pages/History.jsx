@@ -5,7 +5,7 @@ const History = () => {
     <div>
       {/* Header Section */}
       <header className="relative overflow-hidden py-24 lg:py-32 px-6">
-        <div className="container mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold tracking-wide uppercase">
@@ -42,7 +42,7 @@ const History = () => {
 
       {/* Geography Section */}
       <section className="py-24 bg-slate-100 dark:bg-slate-900/50">
-        <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
               <div className="grid grid-cols-2 gap-6">
@@ -94,7 +94,7 @@ const History = () => {
 
       {/* Legal Framework */}
       <section className="py-24 px-6">
-        <div className="container mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <h2 className="text-4xl font-bold mb-4">
               El Marco Legal -{" "}
@@ -166,7 +166,7 @@ const History = () => {
 
       {/* Recognition Process */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900">
-        <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-center text-4xl font-bold mb-20">
             Proceso de Reconocimiento - Hito Institucional
           </h2>
@@ -207,7 +207,7 @@ const History = () => {
                     {item.step}
                   </div>
                 </div>
-                <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm group-hover:shadow-xl transition-all h-full">
+                <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm group-hover:shadow-xl transition-all">
                   <img
                     alt={item.title}
                     className="w-full h-32 object-cover rounded-xl mb-4"
@@ -229,10 +229,10 @@ const History = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         </div>
-        <div className="container mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="text-white space-y-8">
-              <h2 className="text-8xl lg:text-9xl font-black text-white/20 leading-none">
+              <h2 className="text-8xl lg:text-9xl font-black text-white/70 leading-none">
                 2013
               </h2>
               <h3 className="text-4xl lg:text-5xl font-bold">
@@ -276,7 +276,7 @@ const History = () => {
 
       {/* Social Impact */}
       <section className="py-24 px-6">
-        <div className="container mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">
               Significado e Impacto Social
@@ -340,7 +340,7 @@ const History = () => {
 
       {/* Final Quote */}
       <section className="py-24 bg-white dark:bg-slate-950">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
             <img
               alt="Frontis UGEL"

@@ -209,7 +209,7 @@ const Home = () => {
       </section>
 
       {/* Trámites y Servicios */}
-      <section className="container mx-auto py-24 px-6">
+      <section className="max-w-5xl mx-auto py-24 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold mb-4 dark:text-white">
             Trámites y Servicios
@@ -251,7 +251,7 @@ const Home = () => {
 
       {/* Gestión Institucional */}
       <section className="bg-primary/5 dark:bg-slate-900/50 py-24 px-4">
-        <div className="container mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4 dark:text-white">
               Gestión Institucional
@@ -332,7 +332,7 @@ const Home = () => {
       </section>
 
       {/* Directorio de Funcionarios */}
-      <section className="container mx-auto py-24 px-6">
+      <section className="max-w-6xl mx-auto py-24 px-6">
         <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-end mb-16">
           <div>
             <p className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
@@ -431,7 +431,7 @@ const Home = () => {
 
       {/* Estadísticas */}
       <section className="bg-secondary py-20 px-6">
-        <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
           {[
             {
               icon: "domain",
@@ -460,7 +460,7 @@ const Home = () => {
       </section>
 
       {/* Últimas Noticias */}
-      <section className="container mx-auto py-24 px-6">
+      <section className="max-w-6xl mx-auto py-24 px-6">
         <div className="flex justify-between items-center mb-16">
           <h2 className="text-4xl font-extrabold dark:text-white">
             Últimas Noticias
@@ -564,7 +564,7 @@ const Home = () => {
 
       {/* Convocatorias Vigentes */}
       <section className="bg-slate-100 dark:bg-slate-900/30 py-24 px-6">
-        <div className="container mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-12 md:flex md:justify-center md:items-center md:gap-6">
             <div>
               <h2 className="text-4xl font-extrabold mb-4 dark:text-white">

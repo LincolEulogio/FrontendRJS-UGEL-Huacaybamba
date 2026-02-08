@@ -304,7 +304,7 @@ const Directory = () => {
       </header>
 
       {/* Director Card */}
-      <main className="container mx-auto mb-20">
+      <main className="max-w-5xl mx-auto mb-20">
         <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none overflow-hidden flex flex-col md:flex-row items-center">
           <div className="flex-1 p-8 md:p-16 space-y-6">
             <div>
@@ -337,7 +337,7 @@ const Directory = () => {
                 href="#"
               >
                 <span className="material-symbols-rounded text-xl">chat</span>
-                Contactar vía WhatsApp
+                WhatsApp
               </a>
             </div>
           </div>
@@ -396,7 +396,7 @@ const Directory = () => {
       </div>
 
       {/* Team Grid */}
-      <section className="container mx-auto mb-20">
+      <section className="max-w-6xl mx-auto mb-20">
         <div className="flex items-center justify-between mb-10 border-b border-slate-200 dark:border-slate-800 pb-4">
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-primary"></div>

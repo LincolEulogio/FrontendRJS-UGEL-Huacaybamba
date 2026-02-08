@@ -109,7 +109,7 @@ const InstitutionalManagement = () => {
       </section>
 
       {/* Objectives Grid - Bento Style */}
-      <section className="container mx-auto py-20 px-6">
+      <section className="max-w-6xl mx-auto py-20 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-800 mb-4">
             Objetivos Estratégicos
@@ -140,7 +140,7 @@ const InstitutionalManagement = () => {
       </section>
 
       {/* Functions Section */}
-      <section className="container mx-auto py-20 px-6">
+      <section className="max-w-6xl mx-auto py-20 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-800 mb-4">
             Funciones Principales
@@ -167,7 +167,7 @@ const InstitutionalManagement = () => {
       </section>
 
       {/* Team Section */}
-      <section className="container mx-auto py-20 px-6">
+      <section className="max-w-6xl mx-auto py-20 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-800 mb-4">
             Equipo de Gestión
@@ -211,7 +211,7 @@ const InstitutionalManagement = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto py-20 px-6">
+      <section className="max-w-5xl mx-auto py-20 px-6">
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-[2rem] p-12 text-white text-center shadow-2xl">
           <span className="material-symbols-rounded text-6xl mb-6 block">
             architecture

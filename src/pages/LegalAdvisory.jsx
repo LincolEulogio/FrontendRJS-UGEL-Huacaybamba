@@ -36,7 +36,7 @@ const LegalAdvisory = () => {
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen px-6">
-      <main className="pt-12 pb-24 container mx-auto">
+      <main className="pt-12 pb-24 max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="bg-primary/10 text-primary dark:text-blue-400 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">

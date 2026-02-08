@@ -14,8 +14,8 @@ const Vision = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent"></div>
         </div>
-        <div className="relative z-10 container mx-auto w-full">
-          <div className="max-w-3xl">
+        <div className="relative z-10 max-w-6xl mx-auto w-full">
+          <div className="max-w-6xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 font-semibold text-xs uppercase tracking-[0.2em] mb-6 backdrop-blur-md">
               Propósito Institucional
             </span>
@@ -50,7 +50,7 @@ const Vision = () => {
 
       {/* Misión y Visión */}
       <section className="py-32" id="mision">
-        <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Misión Card */}
             <div className="relative group p-12 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl transition-all hover:-translate-y-2 overflow-hidden">
@@ -84,13 +84,6 @@ const Vision = () => {
 
             {/* Visión Card */}
             <div className="relative group p-12 rounded-3xl bg-slate-900 text-white shadow-2xl transition-all hover:-translate-y-2 overflow-hidden">
-              <div className="absolute inset-0 opacity-20">
-                <img
-                  alt="Education Future"
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjotGMQilemAyIUffXYLEHTrzHuAvqHVJKcfQHDdGZ2soZFLid6mWre1Osb87eU_ZJkyZ7kfJ8e8ILG4gpcS6CnAjl7Rbfezt6uv-3EpOOCpOGX8PMxpPB4bw4Vi0gOkP00MKpeiD88xZvQW5yU8FkmtxZOj0bHSMv9Ny6Fb9w5rDobdsROX6At4yOQqfKNucD3b-ExOiwL3ujw8907rgUZcx1g3i2MeHBUZqRj2uWcXPtE7L8xXGG8jYfvWDSST870oh6kykWHhI"
-                />
-              </div>
               <div className="absolute inset-0 bg-primary/40 mix-blend-overlay"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8">
@@ -126,7 +119,7 @@ const Vision = () => {
 
       {/* Objetivos Institucionales */}
       <section className="bg-slate-100 dark:bg-slate-900/50 py-32 px-6">
-        <div className="container mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-20 text-center max-w-2xl mx-auto">
             <span className="text-primary font-bold text-sm tracking-widest uppercase mb-4 block">
               Ejes de Gestión
@@ -140,7 +133,7 @@ const Vision = () => {
             {/* Objetivo 1 - Grande */}
             <div className="lg:col-span-2 p-10 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
               <div>
-                <span className="text-8xl font-display font-black text-slate-100 dark:text-slate-700/50 group-hover:text-primary/10 transition-colors">
+                <span className="text-8xl font-display font-black text-slate-400 transition-colors">
                   01
                 </span>
                 <h4 className="text-2xl font-bold mt-4 mb-4 dark:text-white">
@@ -160,7 +153,7 @@ const Vision = () => {
 
             {/* Objetivo 2 */}
             <div className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all group">
-              <span className="text-6xl font-display font-black text-slate-100 dark:text-slate-700/50 group-hover:text-primary/10 transition-colors">
+              <span className="text-6xl font-display font-black text-slate-400 transition-colors">
                 02
               </span>
               <h4 className="text-xl font-bold mt-4 mb-4 dark:text-white">
@@ -174,7 +167,7 @@ const Vision = () => {
 
             {/* Objetivo 3 */}
             <div className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all group">
-              <span className="text-6xl font-display font-black text-slate-100 dark:text-slate-700/50 group-hover:text-primary/10 transition-colors">
+              <span className="text-6xl font-display font-black text-slate-400 transition-colors">
                 03
               </span>
               <h4 className="text-xl font-bold mt-4 mb-4 dark:text-white">
@@ -189,7 +182,7 @@ const Vision = () => {
             {/* Objetivo 4 - Grande con ícono */}
             <div className="lg:col-span-2 lg:row-span-1 p-10 rounded-[2.5rem] bg-primary text-white shadow-2xl shadow-primary/20 flex items-center gap-8 relative overflow-hidden group">
               <div className="relative z-10 flex-1">
-                <span className="text-6xl font-display font-black text-white/20">
+                <span className="text-6xl font-display font-black text-white transition-colors">
                   04
                 </span>
                 <h4 className="text-2xl font-bold mt-2 mb-4">
@@ -210,7 +203,7 @@ const Vision = () => {
 
             {/* Objetivo 5 */}
             <div className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all group">
-              <span className="text-6xl font-display font-black text-slate-100 dark:text-slate-700/50 group-hover:text-primary/10 transition-colors">
+              <span className="text-6xl font-display font-black text-slate-400 transition-colors">
                 05
               </span>
               <h4 className="text-xl font-bold mt-4 mb-4 dark:text-white">
@@ -224,7 +217,7 @@ const Vision = () => {
 
             {/* Objetivo 6 */}
             <div className="p-10 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all group">
-              <span className="text-6xl font-display font-black text-slate-100 dark:text-slate-700/50 group-hover:text-primary/10 transition-colors">
+              <span className="text-6xl font-display font-black text-slate-400 transition-colors">
                 06
               </span>
               <h4 className="text-xl font-bold mt-4 mb-4 dark:text-white">
@@ -241,7 +234,7 @@ const Vision = () => {
 
       {/* Quote Section */}
       <section className="py-24 px-6 bg-white dark:bg-background-dark">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <div className="mb-12 inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary">
             <span className="material-symbols-rounded text-4xl">
               format_quote

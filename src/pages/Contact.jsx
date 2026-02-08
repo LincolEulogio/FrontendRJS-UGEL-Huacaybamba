@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen ">
-      <main className="container mx-auto flex flex-col lg:flex-row min-h-screen relative">
+      <main className="max-w-6xl mx-auto flex flex-col lg:flex-row min-h-screen relative">
         {/* Sidebar */}
         <aside className="w-full lg:w-[40%] lg:sticky lg:top-0 h-auto lg:h-screen p-8 lg:p-12 flex flex-col justify-between">
           <div className="space-y-8">
@@ -190,15 +190,6 @@ const Contact = () => {
                   </span>
                 </a>
               </div>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                © 2024 UGEL HUACAYBAMBA. Todos los derechos reservados.
-              </p>
-              <p className="text-[10px] text-slate-400 mt-1 uppercase">
-                Desarrollado por ALVACOR
-              </p>
             </div>
           </div>
         </section>

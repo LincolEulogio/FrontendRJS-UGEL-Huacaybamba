@@ -75,7 +75,7 @@ const Navbar = () => {
       ],
     },
     {
-      name: "DOCUMENTOS OFICIALES",
+      name: "DOCUMENTOS",
       path: "#",
       submenu: [
         { name: "Documentos", path: "/documentos", icon: "folder_open" },
@@ -94,7 +94,7 @@ const Navbar = () => {
     <>
       {/* Top Bar - Desktop Only */}
       <div className="bg-secondary text-white/80 py-2 hidden lg:block border-b border-white/10 relative z-50">
-        <div className="container mx-auto flex justify-between items-center text-xs font-medium uppercase tracking-wider">
+        <div className="max-w-6xl mx-auto px-4 flex justify-between items-center text-xs font-medium uppercase tracking-wider">
           <div className="flex gap-6">
             <a
               href="#"
@@ -149,7 +149,7 @@ const Navbar = () => {
             : "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl py-4"
         }`}
       >
-        <div className="container mx-auto flex items-center justify-between px-4 xl:px-0">
+        <div className="max-w-6xl mx-auto px-4 flex items-center justify-between xl:px-0">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-4 group">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1 shadow-sm group-hover:scale-105 transition-transform">
@@ -223,12 +223,9 @@ const Navbar = () => {
 
           {/* Actions & Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <button className="hidden sm:block p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
-              <span className="material-symbols-rounded">search</span>
-            </button>
             <Link
               to="/login"
-              className="bg-primary hover:shadow-lg hover:shadow-primary/30 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all transform active:scale-95 hidden sm:block"
+              className="bg-primary hover:shadow-lg hover:shadow-primary/30 text-white px-6 py-2.5 rounded-full text-xs font-bold transition-all transform active:scale-95 hidden sm:block"
             >
               Mesa de Partes
             </Link>

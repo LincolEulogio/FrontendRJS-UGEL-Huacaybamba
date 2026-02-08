@@ -33,7 +33,7 @@ const DirectionArea = () => {
       <div className="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 animate-pulse"></div>
       <div className="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-3xl opacity-30"></div>
 
-      <main className="pt-32 pb-20 container mx-auto">
+      <main className="pt-32 pb-20 max-w-6xl mx-auto">
         <div className="max-w-7xl mx-auto mb-16">
           <h1 className="text-6xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 bg-clip-text text-transparent">
             Área de Dirección

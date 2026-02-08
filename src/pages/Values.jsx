@@ -13,8 +13,8 @@ const Values = () => {
               "linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_qs5BzaYvGDVdS6_yEzcbfdMXZ6MVm-q2Wu7Iy8lQ1l6sRL4C6sB12U-hIXKXoHBgxiWrTLATpd0HBljmTg2ybsjZDgpwinYnVKSpemGs818G_h99pVY5YplSaoahpf9ckZ9-xnFDNuruvHKUz63UyjShDG_JOr2GArZ_VTMf0wkS5BnABDKDT1xMe211Y67iJ42GrbvAYSr4G6BQ66EG4Xo8HWpnbpxliMCuyRINpPPIEpINUZScI_j_W8wroIhQVbQniZSyW2Y')",
           }}
         />
-        <div className="absolute inset-0 flex flex-col justify-center container mx-auto px-6">
-          <div className="max-w-3xl space-y-4">
+        <div className="absolute inset-0 flex flex-col justify-center max-w-6xl mx-auto px-6">
+          <div className="max-w-6xl space-y-4">
             <span className="inline-block px-3 py-1 bg-primary/20 text-blue-400 text-xs font-bold tracking-widest uppercase rounded-full">
               Identidad Institucional
             </span>
@@ -38,7 +38,7 @@ const Values = () => {
       </section>
 
       {/* Asymmetric Core Values Grid */}
-      <section className="container mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-secondary dark:text-white text-4xl font-extrabold leading-tight tracking-tight">
@@ -179,7 +179,7 @@ const Values = () => {
       </section>
 
       {/* Innovation & Leadership Grid */}
-      <section className="py-24 container px-6 mx-auto bg-white dark:bg-background-dark">
+      <section className="py-24 max-w-4xl mx-auto bg-white dark:bg-background-dark">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-8 relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-video lg:aspect-auto lg:h-[500px]">

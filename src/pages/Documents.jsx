@@ -77,7 +77,7 @@ const Documents = () => {
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen px-6">
-      <div className="container mx-auto py-12">
+      <div className="max-w-6xl mx-auto py-12">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row gap-8 mb-12">
           <div className="md:w-1/2">
