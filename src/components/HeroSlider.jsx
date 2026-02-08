@@ -40,63 +40,65 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-slate-900 group">
-      {/* Slides */}
-      <div
-        className="w-full h-full flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="w-full h-full flex-shrink-0 relative">
-            <img
-              src={slide.image}
-              alt={slide.alt}
-              className="w-full h-full object-cover brightness-75"
+    <div className="w-full px-4 pt-4 pb-8 md:px-8">
+      <div className="relative w-full max-w-6xl mx-auto h-[300px] md:h-[350px] lg:h-[450px] overflow-hidden bg-slate-900 group rounded-[2.5rem] shadow-2xl">
+        {/* Slides */}
+        <div
+          className="w-full h-full flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className="w-full h-full flex-shrink-0 relative">
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                className="w-full h-full object-contain brightness-90"
+              />
+              {/* Optional Overlay Content could go here */}
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+          aria-label="Previous slide"
+        >
+          <span className="material-symbols-rounded text-2xl md:text-3xl">
+            chevron_left
+          </span>
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+          aria-label="Next slide"
+        >
+          <span className="material-symbols-rounded text-2xl md:text-3xl">
+            chevron_right
+          </span>
+        </button>
+
+        {/* Indicators/Dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`transition-all duration-300 rounded-full ${
+                current === index
+                  ? "w-8 h-2.5 bg-primary"
+                  : "w-2.5 h-2.5 bg-white/50 hover:bg-white/80"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
-            {/* Optional Overlay Content could go here */}
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Gradient Overlay (Optional, for better text contrast if header is transparent) */}
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-900/60 to-transparent pointer-events-none"></div>
       </div>
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-        aria-label="Previous slide"
-      >
-        <span className="material-symbols-rounded text-2xl md:text-3xl">
-          chevron_left
-        </span>
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-        aria-label="Next slide"
-      >
-        <span className="material-symbols-rounded text-2xl md:text-3xl">
-          chevron_right
-        </span>
-      </button>
-
-      {/* Indicators/Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`transition-all duration-300 rounded-full ${
-              current === index
-                ? "w-8 h-2.5 bg-primary"
-                : "w-2.5 h-2.5 bg-white/50 hover:bg-white/80"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Gradient Overlay (Optional, for better text contrast if header is transparent) */}
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-900/60 to-transparent pointer-events-none"></div>
     </div>
   );
 };

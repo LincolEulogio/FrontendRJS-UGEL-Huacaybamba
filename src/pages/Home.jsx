@@ -23,7 +23,7 @@ const Home = () => {
       <HeroSlider />
 
       {/* Aplicativos de Interés */}
-      <section className="container mx-auto py-20 relative z-10">
+      <section className="max-w-6xl mx-auto py-20 relative z-10">
         <div className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl rounded-[32px] p-10 shadow-2xl border border-white/20 dark:border-slate-700/50">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-extrabold mb-2 dark:text-white">
@@ -103,7 +103,7 @@ const Home = () => {
       </section>
 
       {/* Acceso a Servicios y Transparencia */}
-      <section className="relative lg:h-[780px] h-auto overflow-hidden py-20 px-6 lg:py-0">
+      <section className="relative h-auto overflow-hidden py-16 px-6">
         <img
           alt="Vista Panorámica de Huacaybamba"
           className="absolute inset-0 w-full h-full object-cover"
@@ -111,94 +111,101 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-slate-900/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-        <div className="relative z-10 container mx-auto lg:h-full flex items-center">
-          <div className="w-full lg:w-2/3">
-            <h2 className="text-5xl font-extrabold text-white mb-8 tracking-tight">
+        <div className="relative z-10 container mx-auto flex flex-col min-[1440px]:flex-row items-center gap-6 min-[1440px]:gap-10">
+          <div className="w-full min-[1440px]:w-1/4 text-center min-[1440px]:text-left">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
               Acceso a Servicios y Transparencia
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="glass-card p-8 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="material-symbols-rounded text-3xl bg-white/20 p-3 rounded-xl">
+            <p className="text-white/80 text-sm md:text-base mb-6 md:mb-0">
+              Herramientas y canales para una gestión abierta y participativa.
+            </p>
+          </div>
+          <div className="w-full min-[1440px]:w-3/4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
                     visibility
                   </span>
-                  <h3 className="font-bold text-2xl">
+                  <h3 className="font-bold text-base md:text-lg leading-tight">
                     Portal de Transparencia
                   </h3>
                 </div>
-                <p className="text-white/80 mb-6">
-                  Información pública y rendición de cuentas según normativa
-                  vigente.
+                <p className="text-white/80 mb-4 text-xs md:text-sm">
+                  Información pública y rendición de cuentas.
                 </p>
                 <a
-                  className="inline-flex items-center gap-2 font-bold group-hover:gap-4 transition-all underline decoration-2 underline-offset-4"
+                  className="inline-flex items-center gap-2 font-bold text-xs md:text-sm group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
                   href="#"
                 >
-                  Acceder al portal{" "}
-                  <span className="material-symbols-rounded">
+                  Acceder{" "}
+                  <span className="material-symbols-rounded text-sm md:text-base">
                     arrow_forward
                   </span>
                 </a>
               </div>
-              <div className="glass-card p-8 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="material-symbols-rounded text-3xl bg-white/20 p-3 rounded-xl">
+              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
                     warning
                   </span>
-                  <h3 className="font-bold text-2xl">Denuncias Anónimas</h3>
+                  <h3 className="font-bold text-base md:text-lg leading-tight">
+                    Denuncias Anónimas
+                  </h3>
                 </div>
-                <p className="text-white/80 mb-6">
-                  Canal seguro para reportar irregularidades o actos de
-                  corrupción.
+                <p className="text-white/80 mb-4 text-xs md:text-sm">
+                  Canal seguro para reportar irregularidades.
                 </p>
                 <a
-                  className="inline-flex items-center gap-2 font-bold group-hover:gap-4 transition-all underline decoration-2 underline-offset-4"
+                  className="inline-flex items-center gap-2 font-bold text-xs md:text-sm group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
                   href="#"
                 >
-                  Reportar ahora{" "}
-                  <span className="material-symbols-rounded">
+                  Reportar{" "}
+                  <span className="material-symbols-rounded text-sm md:text-base">
                     arrow_forward
                   </span>
                 </a>
               </div>
-              <div className="glass-card p-8 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="material-symbols-rounded text-3xl bg-white/20 p-3 rounded-xl">
+              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
                     request_quote
                   </span>
-                  <h3 className="font-bold text-2xl">Información Pública</h3>
+                  <h3 className="font-bold text-base md:text-lg leading-tight">
+                    Información Pública
+                  </h3>
                 </div>
-                <p className="text-white/80 mb-6">
-                  Solicitudes formales de acceso a la información institucional.
+                <p className="text-white/80 mb-4 text-xs md:text-sm">
+                  Solicitudes formales de acceso a la información.
                 </p>
                 <a
-                  className="inline-flex items-center gap-2 font-bold group-hover:gap-4 transition-all underline decoration-2 underline-offset-4"
+                  className="inline-flex items-center gap-2 font-bold text-xs md:text-sm group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
                   href="#"
                 >
                   Solicitar{" "}
-                  <span className="material-symbols-rounded">
+                  <span className="material-symbols-rounded text-sm md:text-base">
                     arrow_forward
                   </span>
                 </a>
               </div>
-              <div className="glass-card p-8 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="material-symbols-rounded text-3xl bg-white/20 p-3 rounded-xl">
+              <div className="glass-card p-5 md:p-6 rounded-2xl text-white group cursor-pointer hover:bg-white/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="material-symbols-rounded text-2xl md:text-3xl bg-white/20 p-2 rounded-lg">
                     forum
                   </span>
-                  <h3 className="font-bold text-2xl">
+                  <h3 className="font-bold text-base md:text-lg leading-tight">
                     Participación Ciudadana
                   </h3>
                 </div>
-                <p className="text-white/80 mb-6">
-                  Espacios de diálogo, consulta y vigilancia ciudadana activa.
+                <p className="text-white/80 mb-4 text-xs md:text-sm">
+                  Espacios de diálogo y vigilancia ciudadana.
                 </p>
                 <a
-                  className="inline-flex items-center gap-2 font-bold group-hover:gap-4 transition-all underline decoration-2 underline-offset-4"
+                  className="inline-flex items-center gap-2 font-bold text-xs md:text-sm group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
                   href="#"
                 >
                   Participar{" "}
-                  <span className="material-symbols-rounded">
+                  <span className="material-symbols-rounded text-sm md:text-base">
                     arrow_forward
                   </span>
                 </a>
@@ -209,7 +216,7 @@ const Home = () => {
       </section>
 
       {/* Trámites y Servicios */}
-      <section className="max-w-5xl mx-auto py-24 px-6">
+      <section className="max-w-4xl mx-auto py-24 px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold mb-4 dark:text-white">
             Trámites y Servicios
@@ -219,7 +226,7 @@ const Home = () => {
             nuestros servicios.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-[1100px] mx-auto">
           {[
             { icon: "inventory_2", title: "Sistema de Gestión Digital" },
             { icon: "laptop_chromebook", title: "Directorio Institucional" },
@@ -233,15 +240,15 @@ const Home = () => {
           ].map((item, index) => (
             <a
               key={index}
-              className="group bg-white dark:bg-slate-800 rounded-xl p-8 border border-blue-500/20 hover:border-blue-500 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all flex flex-col items-center text-center"
+              className="group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-500 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all flex flex-col items-center text-center justify-center min-h-[160px]"
               href="#"
             >
-              <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                <span className="material-symbols-rounded text-5xl text-blue-600">
+              <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-rounded text-4xl text-blue-600">
                   {item.icon}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide leading-tight">
+              <h3 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide leading-tight px-2">
                 {item.title}
               </h3>
             </a>
