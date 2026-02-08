@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import WelcomeModal from "../components/WelcomeModal";
+import HeroSlider from "../components/HeroSlider";
 
 const Home = () => {
   useEffect(() => {
@@ -19,57 +20,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Image Slider Section */}
-      <section className="relative w-full h-[600px] overflow-hidden bg-slate-900 group">
-        <div className="absolute inset-0 flex animate-slide-scroll w-[200%]">
-          <div className="w-1/2 h-full flex shrink-0">
-            <div className="w-1/3 h-full relative overflow-hidden">
-              <img
-                alt="Estudiantes en clase"
-                className="w-full h-full object-cover brightness-90 hover:scale-105 transition-transform duration-[2s]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi2HrawoxpNYFOinTyn4-3JtrAOUFr4ZHlUDtCIrJcvx5HnKpbWtyIbuonjlZ1DjTUQpQvP1U55rp-OKMptleicjNIimELsvkkd97PAxRSEHScgAdWAMqL5Cu5L5oxJTHuEndVHyAMWStwBl5VdpN3P6a94pheJKG3ygL1yzTo7U-fcsMQHfSbgkMSx5hxf2jioPcT51QzWbbbo0iEstG8fr0dXdwJOnfORJGKf0sJih4ZL4E4TQ4qxiMwiW70Ja57YjhucacFN4I"
-              />
-            </div>
-            <div className="w-1/3 h-full relative overflow-hidden">
-              <img
-                alt="Docentes capacitándose"
-                className="w-full h-full object-cover brightness-90 hover:scale-105 transition-transform duration-[2s]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuByHzw-nSry-1TJvlt-579SfhrH-UBvWlZ9owvLroFGzaVP08hClNQ4a2EIxXmmAOxJGKXTsGMcahWmOHBTGHoFkGLoe5sc6JG3DvOY7OecidkBqUZ7ySQfAo1j9EDh6bonbcVqlupvbN48bvv7QeLRqSTmHdT5lfnVA7QEK61DlqLyLLFOD4SGp_ZEg73ImxGaniDq0wcMVCfrTG6xL8yBaba5y5zSKyQs2ijDkTMFSRPRveWhdMjp6cW5awJgQdgv9R1L3We_Rfs"
-              />
-            </div>
-            <div className="w-1/3 h-full relative overflow-hidden">
-              <img
-                alt="Infraestructura educativa"
-                className="w-full h-full object-cover brightness-90 hover:scale-105 transition-transform duration-[2s]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3yf-LMC5m6Uq79cjf1FQMAivxIeNQ7uY_qtwOA9IHcZcsPR1woENYjF9mA79NB9dYssyf-apBnrpI3c4rZZedtmAWr7hEHpDCJFeBKnhH36T09IfPsd_Fx99S6wZL6kOFEwL8UaaMA1n4JjURDvBtlqXLJSTDavVvUGk2zEa_fC8NKVdYyO-JQtpevDVVj7vzmdxOejECvOuia19ds8a7Cn2Pshtukt7lQ2ezZqGtlLegdPE_fxwuvpxF_ZeUI5OMGgevBfds2Gk"
-              />
-            </div>
-          </div>
-          <div className="w-1/2 h-full flex shrink-0">
-            <div className="w-1/3 h-full relative overflow-hidden">
-              <img
-                alt="Estudiantes en clase"
-                className="w-full h-full object-cover brightness-90 hover:scale-105 transition-transform duration-[2s]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi2HrawoxpNYFOinTyn4-3JtrAOUFr4ZHlUDtCIrJcvx5HnKpbWtyIbuonjlZ1DjTUQpQvP1U55rp-OKMptleicjNIimELsvkkd97PAxRSEHScgAdWAMqL5Cu5L5oxJTHuEndVHyAMWStwBl5VdpN3P6a94pheJKG3ygL1yzTo7U-fcsMQHfSbgkMSx5hxf2jioPcT51QzWbbbo0iEstG8fr0dXdwJOnfORJGKf0sJih4ZL4E4TQ4qxiMwiW70Ja57YjhucacFN4I"
-              />
-            </div>
-            <div className="w-1/3 h-full relative overflow-hidden">
-              <img
-                alt="Docentes capacitándose"
-                className="w-full h-full object-cover brightness-90 hover:scale-105 transition-transform duration-[2s]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuByHzw-nSry-1TJvlt-579SfhrH-UBvWlZ9owvLroFGzaVP08hClNQ4a2EIxXmmAOxJGKXTsGMcahWmOHBTGHoFkGLoe5sc6JG3DvOY7OecidkBqUZ7ySQfAo1j9EDh6bonbcVqlupvbN48bvv7QeLRqSTmHdT5lfnVA7QEK61DlqLyLLFOD4SGp_ZEg73ImxGaniDq0wcMVCfrTG6xL8yBaba5y5zSKyQs2ijDkTMFSRPRveWhdMjp6cW5awJgQdgv9R1L3We_Rfs"
-              />
-            </div>
-            <div className="w-1/3 h-full relative overflow-hidden">
-              <img
-                alt="Infraestructura educativa"
-                className="w-full h-full object-cover brightness-90 hover:scale-105 transition-transform duration-[2s]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3yf-LMC5m6Uq79cjf1FQMAivxIeNQ7uY_qtwOA9IHcZcsPR1woENYjF9mA79NB9dYssyf-apBnrpI3c4rZZedtmAWr7hEHpDCJFeBKnhH36T09IfPsd_Fx99S6wZL6kOFEwL8UaaMA1n4JjURDvBtlqXLJSTDavVvUGk2zEa_fC8NKVdYyO-JQtpevDVVj7vzmdxOejECvOuia19ds8a7Cn2Pshtukt7lQ2ezZqGtlLegdPE_fxwuvpxF_ZeUI5OMGgevBfds2Gk"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-slate-900/10 pointer-events-none"></div>
-      </section>
+      <HeroSlider />
 
       {/* Aplicativos de Interés */}
       <section className="container mx-auto py-20 relative z-10 -mt-20">
