@@ -14,6 +14,7 @@ import LegalAdvisory from "./pages/LegalAdvisory";
 import Documents from "./pages/Documents";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import AdminLogin from "./pages/AdminLogin";
 import Department from "./pages/Department";
 import Dashboard from "./pages/Dashboard";
 import ManagementDocuments from "./pages/ManagementDocuments";
@@ -78,10 +79,6 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/login",
-        element: <Login />,
-      },
-      {
         path: "/departamentos",
         element: <Department />,
       },
@@ -102,6 +99,14 @@ const router = createBrowserRouter([
         element: <ConvocationDetail />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/admin/login",
+    element: <AdminLogin />,
   },
 ]);
 
