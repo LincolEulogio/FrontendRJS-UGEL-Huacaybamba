@@ -86,8 +86,8 @@ const Navbar = () => {
         },
       ],
     },
-    { name: "CONVOCATORIA", path: "#", submenu: null },
-    { name: "CONTÁCTENOS", path: "/contacto", submenu: null },
+    { name: "CONVOCATORIA", path: "/convocatorias", submenu: null },
+    { name: "CONTACTO", path: "/contacto", submenu: null },
   ];
 
   return (

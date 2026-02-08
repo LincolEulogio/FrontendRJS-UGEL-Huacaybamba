@@ -17,6 +17,8 @@ import Login from "./pages/Login";
 import Department from "./pages/Department";
 import Dashboard from "./pages/Dashboard";
 import ManagementDocuments from "./pages/ManagementDocuments";
+import Convocations from "./pages/Convocations";
+import ConvocationDetail from "./pages/ConvocationDetail";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +92,14 @@ const router = createBrowserRouter([
       {
         path: "/documentos-de-gestion",
         element: <ManagementDocuments />,
+      },
+      {
+        path: "/convocatorias",
+        element: <Convocations />,
+      },
+      {
+        path: "/convocatorias/:id",
+        element: <ConvocationDetail />,
       },
     ],
   },
